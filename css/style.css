@@ -1,0 +1,72 @@
+/* 
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+ */
+
+ *,
+ *::after,
+ *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ body,
+ html {
+     box-sizing: inherit;
+     font-family: "Lato", sans-serif;
+     font-weight: 400;
+     font-size: 16px;
+     line-height: 1.7;
+     color: #777;
+     padding: 20px;
+ }
+
+ .header {
+     height: 95vh;
+     background-image: linear-gradient(to right bottom, rgba(126, 223, 111, .5), rgba(40, 180, 133, .5)),url("../img/hero.jpg");
+     background-size: cover;
+     background-position: top;
+     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+     position: relative;
+ }
+
+ .logo-box {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+ }
+
+ .logo {
+    height: 35px;
+    width: auto;
+ }
+
+ .text-box {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ }
+
+ .heading-primary {
+     color: #fff;
+     text-transform: uppercase;
+     text-align: center;
+ }
+
+ .heading-primary-main {
+    letter-spacing: 25px;
+    font-size: 60px;
+    display: block;
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 10px;
+}
