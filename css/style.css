@@ -56,12 +56,17 @@ Dark green: #28b485
      color: #fff;
      text-transform: uppercase;
      text-align: center;
+     backface-visibility: hidden; /* ADDED THIS */
  }
 
  .heading-primary-main {
     letter-spacing: 25px;
     font-size: 60px;
     display: block;
+
+    animation-name: moveInLeft;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
 }
 
 .heading-primary-sub {
@@ -69,4 +74,38 @@ Dark green: #28b485
     font-size: 20px;
     font-weight: 400;
     letter-spacing: 10px;
+
+    animation: moveInRight 3s ease-in-out; /* ADDED THIS */
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        transform: translateX(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80% {
+        transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
